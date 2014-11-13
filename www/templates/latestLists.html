@@ -1,0 +1,21 @@
+<ion-view title="Latest Movies">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <div class="list">
+            <a class="myItem item-profile-left" ng-repeat="list in lists | filter:filter" href="http://m.imdb.com/title/{{list.imdb}}">
+                <img src="{{list.Poster}}">
+                <h2><b>{{list.chineseTitle}}</b>
+                </h2>
+                <h2><b>{{list.Title}}</b>
+                </h2>
+                <h2>{{list.Year}}</h2>
+                <h2>
+                    <img src="https://pbs.twimg.com/profile_images/1980473583/imdblogo.jpg" height="25" style='vertical-align:-20%'>&nbsp;&nbsp;{{list.imdbRating}}</h2>
+                <h2>
+                    <img src="http://d3biamo577v4eu.cloudfront.net/static/images/icons/fresh-16.png" height="25" width="25" style='vertical-align:-20%'>&nbsp;&nbsp;{{list.tomatoMeter}}%</h2>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
