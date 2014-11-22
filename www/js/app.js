@@ -20,7 +20,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
 })
-
+.run(function ($rootScope) {
+  $rootScope.openLink = function (url) {
+    var ref = window.open(url, '_blank', 'location=no');
+    ref.addEventListener('exit', function() {
+      $rootScope.$broadcast('BackHome');
+    })
+  };
+})
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 

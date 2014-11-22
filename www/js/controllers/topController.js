@@ -1,6 +1,6 @@
 angular.module('starter.controllers')
 
-.controller('Top10Ctrl', function($scope, $http) {
+.controller('Top10Ctrl', function($scope, $http, $rootScope) {
 
     $scope.lists = [];
     $scope.movies = [{
@@ -68,11 +68,17 @@ angular.module('starter.controllers')
         $http.get('http://www.omdbapi.com/?i=' + $scope.movies[i].imdb + '&tomatoes=true').success(function(data) {
             $scope.lists[i] = data;
             $scope.lists[i].chineseTitle = $scope.movies[i].chineseTitle;
-            $scope.lists[i].imdb = $scope.movies[i].imdb;
+            $scope.lists[i].imdb = "http://m.imdb.com/title/" + $scope.movies[i].imdb;
         }).error(function(data, status, headers, config) { // Do some error handling here }); sleep(1000); i++; }
         });
     };
     for (var i = 0; i < $scope.movies.length; i++) {
         getLists(i);
     }
+    $scope.$on('BackHome', function() {
+        $state.go('app.top10');
+    });
+    $scope.linkMovie = function(link) {
+        $rootScope.openLink(link);
+    };
 });
