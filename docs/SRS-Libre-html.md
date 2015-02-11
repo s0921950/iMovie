@@ -22,61 +22,7 @@ History Record:
 | 1.0.3 | 2014-08-13 | Yitsung |    | New: <br> - WADashboard-DE047 “回工程首頁”功能 <br> - WADashboard-DE081 “Widget偏好設定屬性” <br> - WADashboard-DE082 “Widget手機內顯示” <br> - WADashboard-DE083 “Widget掃描時間間隔” <br> - WADashboard-DC012 Web Service斷線retry設定 <br> - WADashboard-DV-OV010\~ WADashboard-DV-OV060 <br> &nbsp;&nbsp;Dashboard通訊機制與畫面顯示機制需求 <br> - WADashboard-DV-PCTABLET070 <br> - WADashboard-DV-PHONE060 <br><br> Modify: <br> - WADashboard-DE023 修改Left Pane – Dashboard <br>&nbsp;&nbsp;List需求為WADashboard-DE021 <br> -  WADashboard-DE070 / WADashboard-DE080屬性描述 <br> <br> Delete : <br> - WADashboard-DE021 移除Left Pane需求 <br> - WADashboard-DE021 移除Left Pane需求 <br>- WADashboard-DE022 移除Menu List顯示需求 |
                                                 
 
-## 1.  文件範圍Document Scope
 
-### 1.1.  識別Identification 
-
-This document is applied to the Project No. RD1401822001 and the project
-name is WebAccess Dashboard
-
-The document name is “WebAccess Dashboard SRS”, the document ID is
-ADV\_WA\_Dashboard\_SRS\_0001.
-
-
-### 1.2.  目的Purpose
-
-本文旨在敘述WebAccess Dashboard之產品需求規格，WebAccess
-Dashboard為WebAccess下一代之HMI呈現方式，主要特色如下：
-
--   以HTML5/JavaScript/CSS程式語言開發，具備跨平台 (PC / Mobile
-    Platform)、跨瀏覽器 (Firefox / Chrome / IE9 / …) 之產品特色
-
--   內建多樣化的圖表Dashboard
-    Widget，讓使用者可選擇適當之Widget呈現即時或統計資料
-
--   提供Browser based Widget
-    builder，讓使用者可以直接在瀏覽器上繪製自己的Widget
-
--   開放介面，讓Web
-    Application開發者，可以在本軟體之架構下，以HTML5/JavaScript/CSS等程式語法開發自己的Dashboard
-    Widget，並整合至WebAccess Dashboard中
-
--   與WebAccess Web
-    Service整合，可實現列舉WebAccess工程結構、讀取點資料、設定點資料等功能
-
-### 1.3.  定義及專有名詞Terminology Definition 
-
-
-#### 1.3.1. 名詞定義
-
-
-  |名詞|說明|
-  |---|---|
-  |Mobile Platform|行動作業平台，如Apple iOS, Google Android or Windows Phone 8等|
-
-
-
-#### 1.3.2. 縮寫
-
-  |名詞|說明|
-  |---|---|
-  |WP8|Windows Phone 8|
-
-
-### 1.4 參考文件Referenced Document
-
-[1] Official Signalr website:
-[http://www.asp.net/signalr/overview/signalr-20](http://www.asp.net/signalr/overview/signalr-20)
 
 ## 2.  系統分析System Analysis 
 
